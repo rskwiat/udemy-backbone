@@ -3,7 +3,7 @@ var Vehicle = Backbone.Model.extend({
 	validate: function(attrs){
 		if (!attrs.registrationNumber)
 			return "This vehicle needs to be registered"
-		},
+	},
 	start: function(){
 		console.log('Vehicle started');
 	}
@@ -17,14 +17,14 @@ var Car = Vehicle.extend({
 });
 
 var Cars = Backbone.Collection.extend({
-  model: Car
+	model: Car
 });
 
 var car = new Cars([
-  new Car({	color: 'blue', registrationNumber: 'XLI887'}),
-  new Car({	color: 'blue', registrationNumber: 'ZNP123'}),
-  new Car({	color: 'gray', registrationNumber: 'XUV456'})
-]);
+	new Car({color: 'blue', registrationNumber: 'XLI887'}),
+	new Car({color: 'blue', registrationNumber: 'ZNP123'}),
+	new Car({color: 'gray', registrationNumber: 'XUV456'})
+	]);
 
 var blueCars = car.where({color: "blue"});
 console.log('Blue Cars: ', blueCars);
@@ -37,5 +37,5 @@ car.remove(specificVin);
 console.log('Car Collection:', car.toJSON());
 
 car.each(function(car){
-  console.log(car);
-})
+	console.log(car);
+});
