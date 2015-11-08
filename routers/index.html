@@ -10,22 +10,42 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
   <script src="js/lib/modernizr-2.8.3.min.js"></script>
+
+  <style>
+    #nav ul li{ 
+      cursor: pointer; 
+      float: left; 
+      display: inline-block;
+      padding: 0 1em;
+    }
+
+    #container{
+      float: left;
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+  </style>
 </head>
 <body>
 
-  <div id="vehicleList"></div>
+
+  <nav id="nav">
+    <ul>
+      <li data-url="">Home</li>
+      <li data-url="albums">Albums</li>
+      <li data-url="artists">Artist</li>
+      <li data-url="genres">Genres</li>
+    </ul>
+  </nav>
+
+  <div id="container"></div>
 
 
 </body>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="js/lib/underscore.min.js"></script>
   <script src="js/lib/backbone.min.js"></script>
-
-  <script id="vehicleTemplate" type="text/html">
-    <%= registrationNumber %>
-    <button class='delete'>Delete</button>
-
-  </script>
-  <script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
   
 </html>
