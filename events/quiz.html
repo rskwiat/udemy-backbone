@@ -8,22 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
   <script src="js/lib/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-
-
+  
+  <div id="newVehicleForm"></div>
 
   <div id="vehicleList"></div>
-  
-</body>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="js/lib/underscore.min.js"></script>
   <script src="js/lib/backbone.min.js"></script>
-
+  
+  <script id="newVehicleTemplate" type="text/html">
+    <input type="text">
+    <button class="add">Add</button>
+  </script>
 
   <script id="vehicleTemplate" type="text/html">
     <%= registrationNumber %>
@@ -32,4 +35,4 @@
   </script>
   <script src="js/quiz.js"></script>
   
- </html>
+</html>

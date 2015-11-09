@@ -28,8 +28,6 @@ var AppRouter = Backbone.Router.extend({
 		'*other': 'defaultRoute'
 	},
 
-
-
 	viewAlbums: function(){
 		var view = new AlbumsView({el: "#container"});
 		view.render();

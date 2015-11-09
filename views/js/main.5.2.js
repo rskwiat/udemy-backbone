@@ -22,7 +22,7 @@ var SongsViewCollection = Backbone.View.extend({
 			self.$el.append(songView.render().$el);
 		})
 	}
-})
+});
 
 var songs = new SongsCollection([
 	new Song({ title: "Blue is Green" }),

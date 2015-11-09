@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>SPA Quiz</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+  <script src="js/lib/modernizr-2.8.3.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    
+    <nav id="" class="navbar navbar-light bg-faded">
+      <ul class="nav navbar-nav" id="nav">
+        <li class="nav-item nav-link" data-url="home">
+          Home
+        </li>
+        <li class="nav-item nav-link" data-url="cars">
+          Cars
+        </li>
+        <li class="nav-item nav-link" data-url="boats">
+          Boats
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="row">
+      <div id="content">
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="js/lib/underscore.min.js"></script>
+  <script src="js/lib/backbone.min.js"></script>
+
+  
+  <script id="vehicleTemplate" type="text/html">
+    
+    <div class="card card-block">
+      <h4 class="card-title"><%= make %></h4>
+      <p class="card-text">Registration Number: <%= registrationNumber %></p>
+      <a href="<%= site %>" target="_blank" class="btn btn-primary">Visit Brand</a>
+    </div>
+    
+  </script>
+  
+   <script id="homeTemplate" type="text/html">
+    <div class="col-xs-12">
+      <h1>Home Page</h1>
+    </div>
+   </script>
+  
+  <script src="js/quiz.js"></script>
+  
+</html>
