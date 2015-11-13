@@ -1,3 +1,14 @@
+/*
+	TODO:
+	
+	Create a new view and append it to $el in the add() method directly. 
+	This would be the same logic as you have in the render() method.
+
+	var vehicleView = new VehicleView({ model: vehicle })
+	self.$el.append(vehicleView.render().$el);
+
+*/
+
 var Vehicle = Backbone.Model.extend({
 	urlRoot: "/api/vehicles/",
 	validate: function(attrs){
@@ -47,14 +58,14 @@ var VehiclesView = Backbone.View.extend({
 	initialize: function(options){
 		this.bus = options.bus;
 		this.bus.on('addVehicle', this.onAdd, this);
-    	this.model.on('remove', this.onDelete, this);
+    this.model.on('remove', this.onDelete, this);
 	},
 	
 	onAdd: function(model){
 		this.model.add(model, {at: 0});
 		this.$el.empty();
 		this.render();
-  	},
+  },
 	
 	render: function(){
 		var self = this;
@@ -81,8 +92,8 @@ var NewVehicleView = Backbone.View.extend({
 		var input = $('input');
 		var registrationNumber = input.val();
 		input.val('');
-    	var newVehicle = new Vehicle({registrationNumber: registrationNumber})
-	    this.bus.trigger('addVehicle', newVehicle);		
+		var newVehicle = new Vehicle({registrationNumber: registrationNumber})
+		this.bus.trigger('addVehicle', newVehicle);		
 	},
 	
 	render: function(){

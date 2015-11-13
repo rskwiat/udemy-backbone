@@ -1,0 +1,57 @@
+
+body {
+	padding: 40px;
+	background: #f9f9f9;
+}
+
+body, p { font-size: 24px; }
+
+#todoItemsContainer{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#delete{
+	float: right;
+	font-size: 14px;
+	background: #d9534f;
+	border: 0;
+	border-radius: 8px;
+	color: #FFF;
+	padding: 7px 10px;
+}
+
+.completed label{
+	text-decoration: line-through;
+	font-style: italic;
+	color: #ccc;
+}
+
+label{
+	width: 80%;
+	display: inline-block;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+#newToDoItem{
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#todoItems{
+	margin: 0;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background: #fff;
+}
+
+ul li{
+	padding: 10px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
